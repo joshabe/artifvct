@@ -4,6 +4,7 @@
 <title>ARTIFVCT</title>
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css?family=Space+Mono:400,700" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -16,5 +17,19 @@
   
   
 </body>
+  <script>
+    var folder = "archive/";
+
+$.ajax({
+    url : folder,
+    success: function (data) {
+        $(data).find("a").attr("href", function (i, val) {
+            if( val.match(/\.(jpe?g|png|gif)$/) ) { 
+                $("body").append( "<img src='"+ folder + val +"'>" );
+            } 
+        });
+    }
+});
+  </script>
 
 </html>
