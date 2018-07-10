@@ -1,1 +1,1 @@
-<img src="artifvct/_artifvct/download.png" />
+<img src="/_artifvct/download.png" />
