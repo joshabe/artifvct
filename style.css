@@ -5,9 +5,11 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-a {color:#000;}
+nav {
+  font-size:30px;
+}
 
-.nav {
+nav .link {
   font-size:30px;
   float:right;
 }
