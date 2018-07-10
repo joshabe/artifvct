@@ -1,3 +1,5 @@
+* {box-sizing:border-box;}
+
 body {
   color:#000;
   font-family:'Space Mono',monospace;
@@ -9,7 +11,7 @@ nav {
   position:fixed;
   width: 100%;
   margin:0 auto;
-  padding:5%;
+  padding:50px 5%;
 }
 
 nav .link {
