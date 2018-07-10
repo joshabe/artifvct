@@ -7,8 +7,9 @@ body {
 nav {
   font-size:30px;
   position:fixed;
-  width: 90%;
+  width: 100%;
   margin:0 auto;
+  padding:5%;
 }
 
 nav .link {
