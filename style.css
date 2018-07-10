@@ -8,9 +8,14 @@ body {
 nav {
   font-size:30px;
   position:fixed;
+  width: 90%;
 }
 
 nav .link {
   font-size:30px;
   float:right;
+}
+
+.content {
+  width:90%;
 }
