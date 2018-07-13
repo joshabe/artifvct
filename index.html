@@ -18,16 +18,28 @@
   
 </body>
   <script>
-    var dir = "/archive/";
-var fileextension = ".png";
+    $(document).ready(function() {
+
 $.ajax({
-    url: dir,
-    success: function (data) {
-        $(data).find("a:contains(" + fileextension + ")").each(function () {
-            var filename = this.href.replace(window.location.host, "").replace("http://", "");
-            $(".content").append("<img src='" + dir + filename + "'>");
-        });
-    }
+
+url: "archive",
+
+success: function(data){
+
+$(data).find("a:contains(.jpg)").each(function(){
+
+// will loop through
+
+var images = $(this).attr("href");
+
+$('<option value="' + images + '"></option>').html(images).appendTo('.content');
+
+});
+
+}
+
+});
+
 });
   </script>
 
