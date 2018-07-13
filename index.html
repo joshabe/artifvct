@@ -18,15 +18,14 @@
   
 </body>
   <script>
-    var folder = "archive/";
-
+    var dir = "/archive/";
+var fileextension = ".png";
 $.ajax({
-    url : folder,
+    url: dir,
     success: function (data) {
-        $(data).find("a").attr("href", function (i, val) {
-            if( val.match(/\.(jpe?g|png|gif)$/) ) { 
-                $(".content").append( "<img src='"+ folder + val +"'>" );
-            } 
+        $(data).find("a:contains(" + fileextension + ")").each(function () {
+            var filename = this.href.replace(window.location.host, "").replace("http://", "");
+            $(".content").append("<img src='" + dir + filename + "'>");
         });
     }
 });
